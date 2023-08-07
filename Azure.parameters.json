@@ -1,23 +1,27 @@
 {
-    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
-    "contentVersion": "1.0.0.0",
-    "parameters": {
-        "adminUsername": {
-            "value": "rajveer" // TODO: Fill in parameter value
-        },
-        "numberOfInstances": {
-            "value": 2
-        },
-        "OS": {
-            "value": "Ubuntu",
-            "Value": "Windows"
-        },
-        "authenticationType": {
-            "value": "sshPublicKey"
-        },
-        "adminPasswordOrKey": {
-            "value": "" // TODO: Fill in parameter value
-        },
-
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "adminUsername": {
+      "value": "Rajveer"
+    },
+    "numberOfInstances": {
+      "value": 2
+    },
+    "OS": {
+      "value": "Ubuntu"
+    },
+    "location": {
+      "value": "[resourceGroup().location]"
+    },
+    "authenticationType": {
+      "value": "sshPublicKey"
+    },
+    "adminPasswordOrKey": {
+      "value": null
+    },
+    "vmSize": {
+      "value": "Standard_A1_v2"
     }
+  }
 }
